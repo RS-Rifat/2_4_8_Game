@@ -9,7 +9,7 @@ public class CubeSpawner : MonoBehaviour
     public static CubeSpawner Instance;
 
     Queue<Cube> cubesQueue = new Queue<Cube>();
-    [SerializeField] private int cubesQueueCapacity = 20;
+    [SerializeField] private int cubesQueueCapacity = 10000;
     [SerializeField] private bool autoQueueGrow = true;
 
     [SerializeField] private GameObject cubePrefab;

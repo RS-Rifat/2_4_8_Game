@@ -6,8 +6,10 @@ using UnityEngine.UI;
 
 public class Cube : MonoBehaviour
 {
+    static int staticID = 0;
     [SerializeField] private TMP_Text[] numbersText;
 
+    [HideInInspector] public int CubeID;
     [HideInInspector] public Color CubeColor;
     [HideInInspector] public int CubeNumber;
     [HideInInspector] public Rigidbody CubeRigidbody;
@@ -17,6 +19,7 @@ public class Cube : MonoBehaviour
 
     private void Awake()
     {
+        CubeID = staticID++;
         cubeMeshRenderer = GetComponent<MeshRenderer>();
         CubeRigidbody = GetComponent<Rigidbody>();
     }
